@@ -333,15 +333,15 @@ class AbstractChosen
 
   get_single_html: ->
     """
-      <a class="chosen-single chosen-default">
-        <input class="chosen-search-input" type="text" autocomplete="off" />
+      <a class="chosen-ingle chosen-default">
+        <input class="chosen-search-input" aria-expanded="false" aria-haspopup="true" role="combobox" aria-autocomplete="list" autocomplete="off" />
         <span>#{@default_text}</span>
         <div><b></b></div>
       </a>
       <div class="chosen-drop">
         <div class="chosen-search">
         </div>
-        <ul class="chosen-results"></ul>
+        <ul class="chosen-results" role="listbox" aria-busy="true"></ul>
       </div>
     """
 
@@ -349,11 +349,11 @@ class AbstractChosen
     """
       <ul class="chosen-choices">
         <li class="search-field">
-          <input class="chosen-search-input" type="text" autocomplete="off" value="#{@default_text}" />
+          <input class="chosen-search-input" type="text" autocomplete="off" value="#{@default_text}" aria-expanded="false" aria-haspopup="true" role="combobox" aria-autocomplete="list" />
         </li>
       </ul>
       <div class="chosen-drop">
-        <ul class="chosen-results"></ul>
+        <ul class="chosen-results"  role="listbox" aria-busy="true"></ul>
       </div>
     """
 
